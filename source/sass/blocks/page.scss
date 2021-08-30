@@ -1,0 +1,8 @@
+@import '../utils/variables.scss';
+@import '../utils/mixin.scss';
+
+.page {
+  @include onDesktop {
+    padding: 0 100px;
+  }
+}

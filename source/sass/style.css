@@ -33,6 +33,12 @@ h1 {
 }
 
 @media (min-width: 1300px) {
+  .page {
+    padding: 0 100px;
+  }
+}
+
+@media (min-width: 1300px) {
   .header {
     padding: 28px 0;
     display: flex;
