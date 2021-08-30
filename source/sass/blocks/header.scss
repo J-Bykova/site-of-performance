@@ -2,18 +2,39 @@
 @import '../utils/mixin.scss';
 
 .header {
-  @include onDesktop {
-    padding: 28px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 0;
+
+  @include onMobileXl {
+    display: block;
+  }
+
+  @include onMobile {
+    display: block;
+  }
+}
+
+.header__body {
+  padding: 28px 0;
+
+  @include onMobile {
+    padding: 0;
     display: flex;
     justify-content: space-between;
   }
 }
 
-.header__logo-link {
+.header__body-logo-link {
   cursor: pointer;
+
+  @include onMobileXl {
+    display: flex;
+    justify-content: center;
+  }
 }
 
-.header__logo {
+.header__body-logo {
   &:hover {
     opacity: 80%;
   }
@@ -23,24 +44,72 @@
   }
 }
 
-.header__menu {
-  @include reset-list;
-  @include onDesktop {
-    display: flex;
-  }
-}
+.header__body-burger {
+  display: none;
 
-.header__menu-item {
-  @include onDesktop {
-    margin-left: 30px;
+  @include onMobile {
+    @include reset-button;
+    display: block;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
 
-    &:first-of-type {
-      margin-left: 0;
+    &:active {
+      opacity: 40%;
+    }
+
+    &--open-on-mobile {
+      background-image: url("../../img/close-button.png");
+      width: 25px;
+      height: 25px;
+    }
+
+    &--close-on-mobile {
+      background-image: url("../../img/burger-button.png");
+      width: 25px;
+      height: 25px;
     }
   }
 }
 
+.header__menu {
+  @include reset-list;
+  padding: 28px 0;
+  display: flex;
+
+  @include onMobileXl {
+    padding: 8px 0;
+    justify-content: center;
+  }
+
+  @include onMobile {
+    padding: 0;
+    &--close-on-mobile {
+      display: none;
+    }
+
+    &--open-on-mobile {
+      display: block;
+      margin: 25px 0 0 0;
+    }
+  }
+}
+
+.header__menu-item {
+  margin-left: 25px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  @include onMobile {
+    margin: 0;
+    padding: 8px 0 8px 0;
+    text-align: center;
+  }
+}
+
 .header__menu-link {
+  @include set-size-font(16, 24);
   font-family: $mainFont;
   color: $basic-black;
   font-weight: 500;
@@ -53,9 +122,5 @@
 
   &:active {
     opacity: 40%;
-  }
-
-  @include onDesktop {
-    @include set-size-font(16, 24);
   }
 }
