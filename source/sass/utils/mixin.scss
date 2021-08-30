@@ -1,0 +1,21 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin reset-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  white-space: nowrap;
+  outline: none;
+  cursor: pointer;
+}
+
+@mixin set-size-font($fontSize, $fontLine) {
+  font-size: #{$fontSize}px;
+  line-height: #{$fontLine}px;
+}
