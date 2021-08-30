@@ -17,7 +17,7 @@
   cursor: pointer;
 }
 
-@mixin set-size-font($fontSize, $fontLine) {
+@mixin set-font($fontSize, $fontLine) {
   font-size: #{$fontSize}px;
   line-height: #{$fontLine}px;
 }

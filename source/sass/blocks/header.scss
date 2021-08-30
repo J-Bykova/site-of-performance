@@ -12,6 +12,7 @@
 
   @include onMobile {
     display: block;
+    padding: 28px 8px;
   }
 }
 
@@ -89,13 +90,13 @@
 
     &--open-on-mobile {
       display: block;
-      margin: 25px 0 0 0;
+      margin: 24px 0 0 0;
     }
   }
 }
 
 .header__menu-item {
-  margin-left: 25px;
+  margin-left: 24px;
 
   &:first-of-type {
     margin-left: 0;
@@ -109,7 +110,7 @@
 }
 
 .header__menu-link {
-  @include set-size-font(16, 24);
+  @include set-font(16, 24);
   font-family: $mainFont;
   color: $basic-black;
   font-weight: 500;
