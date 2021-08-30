@@ -7,26 +7,14 @@
   gap: 70px 50px;
   grid-template-areas:
     "grid--1 grid--1 grid--1"
-    "grid--2 grid--3 grid--4"
+    "grid--3 grid--2 grid--2"
+    "grid--3 grid--4 grid--4"
     "grid--5 grid--6 grid--6"
     "grid--7 grid--7 grid--8"
     "grid--9 grid--10 grid--11";
 
-  @include onTabletXl {
-    gap: 30px 30px;
-    grid-template-areas:
-      "grid--1 grid--1 grid--1"
-      "grid--2 grid--2 grid--3"
-      "grid--2 grid--2 grid--4"
-      "grid--6 grid--6 grid--6"
-      "grid--5 grid--5 grid--5"
-      "grid--8 grid--11 grid--10"
-      "grid--9 grid--9 grid--9"
-      "grid--7 grid--7 grid--7";
-  }
-
   @include onTablet {
-    gap: 15px 15px;
+    gap: 20px 15px;
     grid-template-areas:
       "grid--1 grid--1 grid--1"
       "grid--2 grid--2 grid--3"
@@ -39,7 +27,7 @@
   }
 
   @include onMobileXl {
-    gap: 15px 15px;
+    gap: 20px 15px;
     grid-template-areas:
       "grid--1 grid--1 grid--1"
       "grid--2 grid--2 grid--2"
@@ -52,7 +40,7 @@
   }
 
   @include onMobile {
-    gap: 15px 15px;
+    gap: 10px 15px;
     grid-template-areas:
       "grid--1 grid--1 grid--1"
       "grid--2 grid--2 grid--2"
@@ -127,20 +115,19 @@
 
   @include set-font(46, 68);
 
-  @include onTabletXl {
-    @include set-font(38, 60);
-  }
-
   @include onTablet {
     @include set-font(30, 52);
+    max-width: 560px;
   }
 
   @include onMobileXl {
     @include set-font(22, 44);
+    max-width: 460px;
   }
 
   @include onMobile {
-    @include set-font(18, 22);
+    @include set-font(22, 28);
+    max-width: 270px;
   }
 }
 
@@ -150,10 +137,6 @@
   margin-top: 30px;
   display: flex;
   justify-content: center;
-
-  @include onTabletXl {
-    margin-top: 18px;
-  }
 
   @include onTablet {
     margin-top: 18px;
@@ -174,10 +157,6 @@
     margin-left: 0;
   }
 
-  @include onTabletXl {
-    @include set-font(16, 24);
-  }
-
   @include onTablet {
     @include set-font(14, 18);
   }
@@ -196,37 +175,23 @@
   }
 }
 
-.content__label {
+.content__header .content__photo {
   margin-top: 30px;
 
-  @include onTabletXl {
-    margin: 0;
-  }
-
-  @include onTablet {
-    margin: 0;
-  }
-
-  @include onMobileXl {
-    margin: 0;
-  }
-
   @include onMobile {
-    margin: 0;
+    margin-top: 14px;
   }
-
-
 }
 
-.content__label-text {
+.content__label .content__text {
   @include set-font(16, 24);
   margin: 0;
 
-  @include onTablet {
-    @include set-font(12, 16);
+  &:not(:first-of-type) {
+    margin: 8px 0 0 0;
   }
 
-  @include onMobileXl {
+  @include onTablet {
     @include set-font(12, 16);
   }
 
@@ -237,11 +202,22 @@
   }
 }
 
-.content__header .content__photo {
-  margin-top: 30px;
+.content__label-text {
+  @include set-font(16, 24);
+  margin: 10px 0 0 0;
 
-  @include onTabletXl {
-    margin-top: 24px;
+  &:not(:first-of-type) {
+    margin: 8px 0 0 0;
+  }
+
+  @include onTablet {
+    @include set-font(12, 16);
+  }
+
+  @include onMobile {
+    @include set-font(12, 16);
+
+    padding: 0 8px;
   }
 }
 
@@ -255,13 +231,8 @@
     @include set-font(16, 24);
   }
 
-  @include onMobileXl {
-    @include set-font(14, 18);
-  }
-
   @include onMobile {
     @include set-font(14, 18);
-
     padding: 0 8px;
   }
 }

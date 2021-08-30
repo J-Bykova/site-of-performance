@@ -4,23 +4,37 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 28px 0;
+  padding: 28px 100px;
+  border-bottom: 1px solid $header-border;
+
+  @include onTablet {
+    display: block;
+    padding: 16px 16px;
+  }
 
   @include onMobileXl {
     display: block;
+    padding: 8px 8px;
   }
 
   @include onMobile {
     display: block;
-    padding: 28px 8px;
+    padding: 8px 8px;
   }
 }
 
 .header__body {
-  padding: 28px 0;
+  @include onTablet {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include onMobileXl {
+    display: flex;
+    justify-content: space-between;
+  }
 
   @include onMobile {
-    padding: 0;
     display: flex;
     justify-content: space-between;
   }
@@ -28,10 +42,16 @@
 
 .header__body-logo-link {
   cursor: pointer;
+  align-items: center;
 
   @include onMobileXl {
     display: flex;
-    justify-content: center;
+    align-items: center;
+  }
+
+  @include onMobile {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -47,6 +67,29 @@
 
 .header__body-burger {
   display: none;
+
+  @include onMobileXl {
+    @include reset-button;
+    display: block;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+
+    &:active {
+      opacity: 40%;
+    }
+
+    &--open-on-mobile {
+      background-image: url("../../img/close-button.png");
+      width: 25px;
+      height: 25px;
+    }
+
+    &--close-on-mobile {
+      background-image: url("../../img/burger-button.png");
+      width: 25px;
+      height: 25px;
+    }
+  }
 
   @include onMobile {
     @include reset-button;
@@ -74,16 +117,25 @@
 
 .header__menu {
   @include reset-list;
-  padding: 28px 0;
   display: flex;
 
-  @include onMobileXl {
-    padding: 8px 0;
+  @include onTablet {
+    margin-top: 16px;
     justify-content: center;
   }
 
+  @include onMobileXl {
+    &--close-on-mobile {
+      display: none;
+    }
+
+    &--open-on-mobile {
+      display: block;
+      margin: 24px 0 0 0;
+    }
+  }
+
   @include onMobile {
-    padding: 0;
     &--close-on-mobile {
       display: none;
     }
@@ -100,6 +152,12 @@
 
   &:first-of-type {
     margin-left: 0;
+  }
+
+  @include onMobileXl {
+    margin: 0;
+    padding: 8px 0 8px 0;
+    text-align: center;
   }
 
   @include onMobile {

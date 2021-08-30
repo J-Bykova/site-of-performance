@@ -36,27 +36,27 @@
               fill="#1F1E1C"/>
     </symbol>
 </svg>
+<header class='header'>
+    <div class="header__body">
+        <a class='header__body-logo-link' href="#">
+            <svg class='header__body-logo' width="144" height="19">
+                <use xlink:href="#logo"></use>
+            </svg>
+        </a>
+        <button class="header__body-burger"
+                type="button"
+                aria-label="close/open">
+        </button>
+    </div>
+    <ul class='header__menu'>
+        <li class='header__menu-item'><a class='header__menu-link' href="#">Премьеры</a></li>
+        <li class='header__menu-item'><a class='header__menu-link' href="#">Интервью</a></li>
+        <li class='header__menu-item'><a class='header__menu-link' href="#">Новости</a></li>
+        <li class='header__menu-item'><a class='header__menu-link' href="#">Дискуссии</a></li>
+        <li class='header__menu-item'><a class='header__menu-link' href="#">Рекомендации</a></li>
+    </ul>
+</header>
 <div class="page">
-    <header class='header'>
-        <div class="header__body">
-            <a class='header__body-logo-link' href="#">
-                <svg class='header__body-logo' width="144" height="19">
-                    <use xlink:href="#logo"></use>
-                </svg>
-            </a>
-            <button class="header__body-burger"
-                    type="button"
-                    aria-label="close/open">
-            </button>
-        </div>
-        <ul class='header__menu'>
-            <li class='header__menu-item'><a class='header__menu-link' href="#">Премьеры</a></li>
-            <li class='header__menu-item'><a class='header__menu-link' href="#">Интервью</a></li>
-            <li class='header__menu-item'><a class='header__menu-link' href="#">Новости</a></li>
-            <li class='header__menu-item'><a class='header__menu-link' href="#">Дискуссии</a></li>
-            <li class='header__menu-item'><a class='header__menu-link' href="#">Рекомендации</a></li>
-        </ul>
-    </header>
     <main>
         <article class="content content-grid">
             <header class="content__header content-grid__1">
@@ -88,8 +88,9 @@
                  srcset="../img/photo2-1x.png 1x, img/photo2-2x.png 2x"
                  width="360" height="526" alt="На фото: режиссер Жан Портье">
             <div class="content__label content-grid__4">
-                <p class="content__label-text">На фото: режиссер Жан Портье на репетиции спектакля «В прошлом году в Монпелье»</p>
-                <p class="content__label-text">Фотограф: Пьер Буше</p>
+                <p class="content__text">На фото: режиссер Жан Портье на репетиции спектакля «В прошлом году в
+                    Монпелье»</p>
+                <p class="content__text">Фотограф: Пьер Буше</p>
             </div>
             <p class="content__text content-grid__5">
                 В дорогом отеле мужчина уверяет женщину,
@@ -153,15 +154,15 @@
             </div>
         </article>
     </main>
-    <footer class="footer">
-        <a class='footer__logo-link' href="#">
-            <svg width="144" height="19">
-                <use xlink:href="#logo"></use>
-            </svg>
-        </a>
-        <p class="footer__copyright">© 2021 Все права защищены</p>
-    </footer>
 </div>
+<footer class="footer">
+    <a class='footer__logo-link' href="#">
+        <svg width="144" height="19">
+            <use xlink:href="#logo"></use>
+        </svg>
+    </a>
+    <p class="footer__copyright">© 2021 Все права защищены</p>
+</footer>
 <script src="js/menu.js"></script>
 </body>
 </html>

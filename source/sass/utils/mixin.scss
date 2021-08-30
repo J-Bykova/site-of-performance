@@ -41,12 +41,6 @@
   }
 }
 
-@mixin onTabletXl {
-  @media (min-width: #{$tablet-xl-min-width}) and (max-width: #{$tablet-xl-max-width}) {
-    @content;
-  }
-}
-
 @mixin onDesktop {
   @media (min-width: #{$desktop-min-width}) {
     @content;

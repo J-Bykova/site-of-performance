@@ -2,17 +2,17 @@
 @import '../utils/mixin.scss';
 
 .page {
-  padding: 0 100px;
+  padding: 70px 100px 70px 100px;
 
   @include onTablet {
-    padding: 0 50px;
+    padding: 30px 40px 30px 40px;
   }
 
   @include onMobileXl {
-    padding: 0 16px;
+    padding: 16px 16px 16px 16px;
   }
 
   @include onMobile {
-    padding: 0;
+    padding:  16px 0 16px 0;
   }
 }

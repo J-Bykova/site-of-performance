@@ -1,0 +1,42 @@
+@import '../utils/variables.scss';
+@import '../utils/mixin.scss';
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 28px 100px;
+  border-top: 1px solid $header-border;
+
+  @include onTablet {
+    padding: 28px 50px;
+  }
+
+  @include onMobileXl {
+    padding: 24px 16px;
+  }
+
+  @include onMobile {
+    padding: 16px 8px;
+    display: block;
+    text-align: center;
+  }
+}
+
+.footer__logo-link {
+  display: block;
+  justify-content: center;
+  margin: 4px 0;
+}
+
+.footer__copyright {
+  margin: 4px 0;
+  @include set-font(14, 20);
+  font-family: $mainFont;
+  color: $special-black;
+  font-weight: 400;
+  font-style: normal;
+
+  @include onMobile {
+    @include set-font(12, 16);
+  }
+}
