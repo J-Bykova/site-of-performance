@@ -1,3 +1,5 @@
+@import '../utils/variables.scss';
+
 @mixin reset-list {
   margin: 0;
   padding: 0;
@@ -18,4 +20,35 @@
 @mixin set-size-font($fontSize, $fontLine) {
   font-size: #{$fontSize}px;
   line-height: #{$fontLine}px;
+}
+
+// Size mixins
+@mixin onMobile {
+  @media (max-width: #{$mobile-max-width}) {
+    @content;
+  }
+}
+
+@mixin onMobileXl {
+  @media (min-width: #{$mobile-xl-min-width}) and (max-width: #{$mobile-xl-max-width}) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: #{$tablet-min-width}) and (max-width: #{$tablet-max-width}) {
+    @content;
+  }
+}
+
+@mixin onTabletXl {
+  @media (min-width: #{$tablet-xl-min-width}) and (max-width: #{$tablet-xl-max-width}) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: #{$desktop-min-width}) {
+    @content;
+  }
 }

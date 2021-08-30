@@ -1,0 +1,61 @@
+@import '../utils/variables.scss';
+@import '../utils/mixin.scss';
+
+.header {
+  @include onDesktop {
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header__logo-link {
+  cursor: pointer;
+}
+
+.header__logo {
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+}
+
+.header__menu {
+  @include reset-list;
+  @include onDesktop {
+    display: flex;
+  }
+}
+
+.header__menu-item {
+  @include onDesktop {
+    margin-left: 30px;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}
+
+.header__menu-link {
+  font-family: $mainFont;
+  color: $basic-black;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 40%;
+  }
+
+  @include onDesktop {
+    @include set-size-font(16, 24);
+  }
+}
